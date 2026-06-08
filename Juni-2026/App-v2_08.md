@@ -65,3 +65,14 @@
   - `backend/src/controllers/partner.controller.js`
 - **Deskripsi Perubahan & Fungsi**:
   - Memperbaiki kueri pencarian data pelanggan terikat pada endpoint migrasi mitra (`migrationPartner`) agar menggunakan service partner yang tepat guna mendeteksi data secara akurat.
+
+## 📢 Dampak Perubahan & Fungsionalitas Baru (User Capabilities & Bug Fixes)
+- **Kemampuan Pengguna/Admin**:
+  - Admin sekarang dapat memantau, mencari, menyortir, dan memfilter seluruh daftar Radius NAS/Router yang aktif melalui antarmuka Datatables.
+  - Admin/pelanggan dapat mengakses dokumen Berita Acara Pemasangan (BAP) dan Penghentian Layanan (BAD) secara publik tanpa terhambat otentikasi login.
+- **Bug Fix / Solusi Masalah**:
+  - Memperbaiki kueri validasi di `migrationPartner` sehingga status dependensi pelanggan terikat dideteksi secara akurat (menghindari kegagalan migrasi partner akibat filter `pid: 'master'`).
+  - Memperbaiki kegagalan filter pencarian pada kolom `nas_id` dengan menyesuaikan tipe data skema di backend menjadi `Number` agar kompatibel dengan data numerik yang tersimpan di MongoDB.
+  - Menyelesaikan masalah pemblokiran CORS Private Network Access (PNA) pada *origin* HTTPS publik yang mencoba terhubung ke loopback lokal pengembang.
+- **Menu/Tombol Baru**:
+  - Tombol **"Tambah NAS"** di halaman daftar Radius NAS kini aktif bagi pengguna yang memiliki hak akses `radiusNas.create` untuk mempermudah alur penambahan router baru di masa mendatang.
