@@ -36,6 +36,14 @@
   - **Deskripsi**: Menambahkan navigasi link menu Radius NAS di sidebar networks.
 - `[frontend/src/i18n/locales/id/translations.json](file:///d:/Project/DEKASIMAL_V2/frontend/src/i18n/locales/id/translations.json)`
   - **Deskripsi**: Menambahkan string lokalisasi bahasa Indonesia untuk kolom tabel dan judul daftar Radius NAS/Router.
+- `[frontend/src/app/pages/services/dataAccess/create.jsx](file:///d:/Project/DEKASIMAL_V2/frontend/src/app/pages/services/dataAccess/create.jsx)`
+  - **Deskripsi**: Menghapus state `selectedTicket` dan `setSelectedTicket` yang tidak digunakan guna membersihkan kode dan menghindari kesalahan linting.
+- `[frontend/src/app/pages/services/dedicatedInternet/create.jsx](file:///d:/Project/DEKASIMAL_V2/frontend/src/app/pages/services/dedicatedInternet/create.jsx)`
+  - **Deskripsi**: Menyelesaikan kesalahan linting `no-unused-vars` dengan menghapus state `selectedTicket` yang terdefinisi tetapi tidak digunakan serta menghapus sisa `console.log` terkait.
+- `[backend/src/controllers/productDedicatedInternet.controller.js](file:///d:/Project/DEKASIMAL_V2/backend/src/controllers/productDedicatedInternet.controller.js)`
+  - **Deskripsi**: Menambahkan penanganan error yang lebih aman dengan memeriksa `.error` dari respons `newDedicatedInternet`.
+- `[backend/src/models/productDataAccess.model.js](file:///d:/Project/DEKASIMAL_V2/backend/src/models/productDataAccess.model.js)`
+  - **Deskripsi**: Menambahkan validasi wajib (`required`) pada field `pid` untuk menjamin integritas data layanan Data Access.
 - `[AGENTS.md](file:///d:/Project/DEKASIMAL_V2/AGENTS.md)`
   - **Deskripsi**: Menambahkan aturan arsitektur frontend nomor 15 tentang standardisasi berkas skema `columns.jsx`.
 
@@ -74,5 +82,6 @@
   - Memperbaiki kueri validasi di `migrationPartner` sehingga status dependensi pelanggan terikat dideteksi secara akurat (menghindari kegagalan migrasi partner akibat filter `pid: 'master'`).
   - Memperbaiki kegagalan filter pencarian pada kolom `nas_id` dengan menyesuaikan tipe data skema di backend menjadi `Number` agar kompatibel dengan data numerik yang tersimpan di MongoDB.
   - Menyelesaikan masalah pemblokiran CORS Private Network Access (PNA) pada *origin* HTTPS publik yang mencoba terhubung ke loopback lokal pengembang.
+  - Menyelesaikan kesalahan linting ESLint `no-unused-vars` untuk variabel `selectedTicket` di form pembuatan `dedicatedInternet` dan `dataAccess`.
 - **Menu/Tombol Baru**:
   - Tombol **"Tambah NAS"** di halaman daftar Radius NAS kini aktif bagi pengguna yang memiliki hak akses `radiusNas.create` untuk mempermudah alur penambahan router baru di masa mendatang.
