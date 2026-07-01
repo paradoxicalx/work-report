@@ -13,9 +13,8 @@
 5. [CRUD Purchase Order (PO)](#5-crud-purchase-order-po)
 6. [Alur Persetujuan PO](#6-alur-persetujuan-po)
 7. [Tanda Tangan Digital PO](#7-tanda-tangan-digital-po)
-8. [Lampiran (Attachment) PO](#8-lampiran-attachment-po)
-9. [Aturan & Larangan Sistem](#9-aturan--larangan-sistem)
-10. [Referensi Cepat](#10-referensi-cepat)
+8. [Aturan & Larangan Sistem](#8-aturan--larangan-sistem)
+9. [Referensi Cepat](#9-referensi-cepat)
 
 ---
 
