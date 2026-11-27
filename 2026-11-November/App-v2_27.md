@@ -6,25 +6,6 @@
 
 ---
 
-## 🌿 Branch: `claude/frosty-chatterjee-9606b0` — Penyesuaian Unit Test Daftar Job Cron (`oltAutoSync`)
-
-### 📌 Informasi Issue
-
-- **Nomor Issue**: - (Task / Test Fix)
-- **Judul Issue**: Penyesuaian Unit Test `CRON_JOB_NAMES` dengan Penambahan Job `oltAutoSync`
-- **Status Branch**: `Belum di-merge`
-
-### 📅 Rincian Commit
-
-#### [4d58388a] - test(cron): sesuaikan harapan daftar job cron dengan oltAutoSync - 2026-11-27 16:43:39
-
-- **Komponen yang Berubah**:
-  - `backend/test/unit/cronSettings.service.test.js`
-- **Deskripsi Perubahan & Fungsi**:
-  - Memperbarui ekspektasi jumlah job pada unit test `CRON_JOB_NAMES` dan `result.jobs` di `cronSettings.service.test.js` dari `24` menjadi `25` serta menambahkan assertion `oltAutoSync` agar selaras dengan daftar job scheduler terbaru.
-
----
-
 ## 🌿 Branch: `issue-592` — Fitur Peta Sebaran Pelanggan (Customer Map)
 
 ### 📌 Informasi Issue
